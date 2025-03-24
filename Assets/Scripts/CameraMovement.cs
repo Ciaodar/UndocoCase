@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
@@ -23,11 +24,19 @@ public class CameraMovement : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-    }  
-    
-    
-    
-    
+    }
+
+    private void Start()
+    {
+        if (target == null)
+        {
+            return;
+        }
+        oldTargetPosition = target.position;
+        transform.position = target.position + offset;
+    }
+
+
     private void LateUpdate()
     {
         if (target == null) return;

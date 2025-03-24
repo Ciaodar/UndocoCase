@@ -10300,9 +10300,8 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 8
-  currentSpeed: 0
   turnSmoothVelocity: 0.125
-  turnSmoothTime: 0.03
+  turnSmoothTime: 0.125
   speed: 6
   gravity: -9.81
 --- !u!95 &1415402033225293883
